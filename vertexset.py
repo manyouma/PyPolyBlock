@@ -28,6 +28,7 @@ class vertexset:
         if removed.shape[0] >= 1:
             self._remove_vertex(removed.astype(int))
             print(f"Removed {removed.shape[0]} improper vertices.")
+        return
 
 
     def remove_dominated(self):

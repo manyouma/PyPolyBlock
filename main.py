@@ -31,7 +31,7 @@ V.refine_index(0)
 num_iteration = 0
 while np.max(V.value_vec) >= V.best_value + param["tor_MO"]:
     
-    # remove vertices that are too closed to the axis
+    # remove vertices that are too close to the axis
     V.remove_closed2axis()
     
     # Pick the vertex with the current upper bound (CUB)
@@ -41,10 +41,10 @@ while np.max(V.value_vec) >= V.best_value + param["tor_MO"]:
     if np.mod(num_iteration, param["freq_print"]) == 0:
         print(f"ITER:{num_iteration}, CBV: {V.best_value}, CUB: {np.max(V.value_vec)}, chosen_index: {chosen_index}, num_vertex: {len(V.value_vec)}")
         
-    if np.mod(num_iteration, param["freq_improper"]) == 1:
+    if np.mod(num_iteration, param["freq_improper"]) == 0:
         V.remove_improper()
 
-    if np.mod(num_iteration, param["freq_dominated"]) == 1:
+    if np.mod(num_iteration, param["freq_dominated"]) == 0:
         V.remove_dominated()
 
     num_iteration += 1
