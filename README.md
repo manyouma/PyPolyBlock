@@ -8,5 +8,5 @@ To get started, run
 python main.py
 ```
 
-
-Contact: manyouma at gmail dot com
+Please feel free to let me know if you have any suggestions to make the code faster or more robust. 
+I can be reached by email at [manyouma at gmail dot com]. 
